@@ -1,0 +1,89 @@
+.card{
+    display: inline-block;
+}
+.card .back, .card .front{
+    background-image: url(../img/cardsheet.png);
+    width: 175px;
+    height: 250px;
+}
+
+.card.battlement .back{
+    background-position-x: -2275px;
+    background-position-y: 0px;
+}
+
+.card.garrison .back{
+    background-position-x: -2275px;
+    background-position-y: -250px;
+}
+
+/* Suit */
+.card .front.hearts{
+    background-position-y: 0px;
+}
+
+.card .front.clubs{
+    background-position-y: -250px;
+}
+
+.card .front.spades{
+    background-position-y: -500px;
+}
+
+.card .front.diamonds{
+    background-position-y: -750px;
+}
+
+
+/* Cards */
+.card .front.card2{
+    background-position-x: 0px;
+}
+
+.card .front.card3{
+    background-position-x: -175px;
+}
+
+.card .front.card4{
+    background-position-x: -350px;
+}
+
+.card .front.card5{
+    background-position-x: -525px;
+}
+
+.card .front.card6{
+    background-position-x: -700px;
+}
+
+.card .front.card7{
+    background-position-x: -875px;
+}
+
+.card .front.card8{
+    background-position-x: -1050px;
+}
+
+.card .front.card9{
+    background-position-x: -1225px;
+}
+
+.card .front.card10{
+    background-position-x: -1400px;
+}
+
+.card .front.card11{
+    background-position-x: -1575px;
+}
+
+.card .front.card12{
+    background-position-x: -1750px;
+}
+
+.card .front.card13{
+    background-position-x: -1925px;
+}
+
+.card .front.card14{
+    background-position-x: -2100px;
+}
