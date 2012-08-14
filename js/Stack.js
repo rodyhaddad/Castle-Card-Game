@@ -1,8 +1,8 @@
-exports.Stack = function(someCards){
+var Stack = function(someCards){
     this.cards = someCards
 }
 
-exports.Stack.prototype = {
+Stack.prototype = {
 	addCards: function(someCards){
     	this.cards = this.cards.concat(someCards);
 	},
@@ -11,12 +11,6 @@ exports.Stack.prototype = {
 	},
 	hideTop: function(){
     	this.cards[0].setAsHidden();
-	},
-	
-	toObject: function(){
-    	return this.cards.map(function(aCard){
-        	return aCard.toObject();
-    	});
 	},
 	toString: function(){
     	return this.cards.join(", ");

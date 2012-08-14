@@ -1,9 +1,4 @@
-var Column = require("./Column.js").Column;
-require("./Math.UID.js");
-
-var players = {};
-
-exports.Player = function(name){
+var Player = function(){
     this.name = name;
     this.cards = [];
     this.columns = [];
@@ -15,10 +10,9 @@ exports.Player = function(name){
     }
     
     players[this.uid] = this;
-    
 }
 
-exports.Player.prototype = {
+Player.prototype = {
     setName: function(aName){
         this.name = aName;
     },

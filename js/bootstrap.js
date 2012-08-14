@@ -5,8 +5,11 @@
 	}
 	
 	$.when(
-		loadScript("NotificationCenter")
+		loadScript("NotificationCenter"),
+		loadScript("AppController"),
+		loadScript("Player")
 	).done(function(){
+    	AppController.initialized();
 		console.log("All scripts have been loaded.")
 	});
 

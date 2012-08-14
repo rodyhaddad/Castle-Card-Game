@@ -2,6 +2,12 @@ body{
     padding-top: 250px;
 }
 
+.player1{
+    -webkit-transform: scale(1);
+    text-align: center;
+    white-space: nowrap;
+}
+
 .cardContainer{
     display: inline-block;
     position: relative;

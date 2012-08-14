@@ -9,6 +9,13 @@ exports.Column.prototype = {
 	addCards: function(someCards){
     	this.garrisonStack.addCards(someCards);
 	},
+	
+	toObject: function(){
+    	return {
+        	battlementStack: this.battlementStack.toObject(),
+        	garrisonStack: this.garrisonStack.toObject();
+    	}
+	}
 	toString: function(){
     	return "battlement: "+ this.battlementStack.toString() + "\ngarrison: " + this.garrisonStack.toString()
 	}
