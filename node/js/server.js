@@ -1,4 +1,4 @@
-//var io = require('socket.io').listen(8765);
+var io = require('socket.io').listen(8765);
 
 var NotificationCenter = require("./NotificationCenter.js");
 var Deck = require("./Deck.js").Deck;
