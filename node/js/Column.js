@@ -13,9 +13,9 @@ exports.Column.prototype = {
 	toObject: function(){
     	return {
         	battlementStack: this.battlementStack.toObject(),
-        	garrisonStack: this.garrisonStack.toObject();
+        	garrisonStack: this.garrisonStack.toObject()
     	}
-	}
+	},
 	toString: function(){
     	return "battlement: "+ this.battlementStack.toString() + "\ngarrison: " + this.garrisonStack.toString()
 	}

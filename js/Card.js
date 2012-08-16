@@ -19,6 +19,7 @@ Card.prototype = {
     setAsHidden: function(){
         this.shown.false;
     },
+    
 	toString: function(){
     	return this.number + " of " + this.suit;
 	}

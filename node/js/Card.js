@@ -2,7 +2,7 @@
     number => (Number) from 2, 14
     suit   => (String) either Hearts, Clubs, Spades, Diamonds
 */
-var Card = function(number, suit){
+exports.Card = function(number, suit){
     if(number && suit && number >= 2 && number <= 14 && ["Hearts", "Clubs", "Spades", "Diamonds"].indexOf(suit) !== -1){
         this.number = number;
         this.suit = suit;
@@ -12,7 +12,7 @@ var Card = function(number, suit){
     }
 };
 
-Card.prototype = {
+exports.Card.prototype = {
     setAsShown: function(){
         this.shown = true;
     },
@@ -24,7 +24,7 @@ Card.prototype = {
         return {
             number: this.number,
             suit: this.suit
-        }
+        };
     },
 	toString: function(){
     	return this.number + " of " + this.suit;
