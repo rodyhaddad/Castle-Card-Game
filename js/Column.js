@@ -1,6 +1,6 @@
 var Column = function(someCards){
-    this.battlementStack = new Stack( [someCards.pop()] );
-    this.garrisonStack = new Stack(someCards);
+    this.battlementStack = new BattlementStack( [someCards.pop()] );
+    this.garrisonStack = new GarrisonStack(someCards);
 }
 
 Column.prototype = {

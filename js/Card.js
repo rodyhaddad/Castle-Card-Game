@@ -17,10 +17,30 @@ Card.prototype = {
         this.shown = true;
     },
     setAsHidden: function(){
-        this.shown.false;
+        this.shown = false;
     },
     
 	toString: function(){
     	return this.number + " of " + this.suit;
+	},
+	
+	returnElement: function(parent){
+		var elem = document.createElement('div');
+		var cardIndex = parent.getCardIndex(this);
+		if(cardIndex === 0){
+			$(elem).addClass("cardContainer topCard").css({bottom: ((parent.getCardAmount()-cardIndex)*10)});
+		}else{
+		    $(elem).addClass("cardContainer").css({bottom: ((parent.getCardAmount()-cardIndex)*10), zIndex: (0-cardIndex)});
+		}
+		if(this.shown === true){
+			$(elem).addClass("faceUp");
+		}else{
+		    $(elem).addClass("faceDown");
+		}
+		elem.innerHTML = "<div class='card'>\
+                				<div class='front " + this.suit + " card" + this.number + "'></div>\
+                			    <div class='back'></div>\
+            			    </div>";
+        return elem;
 	}
 }

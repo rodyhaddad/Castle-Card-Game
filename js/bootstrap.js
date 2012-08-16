@@ -7,7 +7,10 @@
 	$.when(
 		loadScript("NotificationCenter"),
 		loadScript("AppController"),
-		loadScript("Player")
+		loadScript("Player"),
+		loadScript("Card"),
+		loadScript("BattlementStack"),
+		loadScript("GarrisonStack")
 	).done(function(){
     	AppController.initialized();
 		console.log("All scripts have been loaded.")
