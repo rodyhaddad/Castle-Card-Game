@@ -32,7 +32,7 @@ BattlementStack.prototype = {
 	},
 	
 	setBattlement: function(aCard){
-		if(!Boolean(this.battlementCard)){
+		if(!this.battlementCard){
 			this.battlementCard = aCard;
 		}else{
 			throw "There is already a battlement in this battlement stack"
@@ -43,7 +43,7 @@ BattlementStack.prototype = {
 	},
 	
 	setDefender: function(aCard){
-		if(!Boolean(this.defenderCard)){
+		if(!this.defenderCard){
 			this.defenderCard = aCard;
 			this.defenderCard.setAsShown();
 		}else{
@@ -54,13 +54,13 @@ BattlementStack.prototype = {
 		return this.defenderCard;
 	},
 	
-    returnElement: function(){
+    generateElement: function(){
 		var elem = document.createElement('div');
 		$(elem).addClass("stack battlement");
-		if(Boolean(this.battlementCard)){
+		if(this.battlementCard){
     	    $(elem).append(this.battlementCard.returnElement(this));
     	}
-    	if(Boolean(this.defenderCard)){
+    	if(this.defenderCard){
     	    $(elem).append(this.defenderCard.returnElement(this));
     	}
         return elem;
